@@ -1,0 +1,72 @@
+[
+  {
+    "id": "FL001",
+    "from": "SFO",
+    "to": "Tokyo",
+    "airline": "ANA",
+    "depart": "2026-08-10T11:05:00",
+    "arrive": "2026-08-11T14:40:00",
+    "stops": 0,
+    "price_usd": 780
+  },
+  {
+    "id": "FL002",
+    "from": "SFO",
+    "to": "Tokyo",
+    "airline": "United",
+    "depart": "2026-08-10T13:20:00",
+    "arrive": "2026-08-11T17:10:00",
+    "stops": 1,
+    "price_usd": 610
+  },
+  {
+    "id": "FL003",
+    "from": "LAX",
+    "to": "Tokyo",
+    "airline": "Japan Airlines",
+    "depart": "2026-08-10T00:40:00",
+    "arrive": "2026-08-11T04:55:00",
+    "stops": 0,
+    "price_usd": 825
+  },
+  {
+    "id": "FL004",
+    "from": "JFK",
+    "to": "Paris",
+    "airline": "Air France",
+    "depart": "2026-08-10T18:15:00",
+    "arrive": "2026-08-11T07:30:00",
+    "stops": 0,
+    "price_usd": 690
+  },
+  {
+    "id": "FL005",
+    "from": "JFK",
+    "to": "Paris",
+    "airline": "Delta",
+    "depart": "2026-08-10T20:00:00",
+    "arrive": "2026-08-11T09:45:00",
+    "stops": 0,
+    "price_usd": 560
+  },
+  {
+    "id": "FL006",
+    "from": "ORD",
+    "to": "London",
+    "airline": "British Airways",
+    "depart": "2026-08-10T17:35:00",
+    "arrive": "2026-08-11T06:50:00",
+    "stops": 0,
+    "price_usd": 640
+  },
+  {
+    "id": "FL007",
+    "from": "SFO",
+    "to": "Tokyo",
+    "airline": "Zipair",
+    "depart": "2026-08-10T02:10:00",
+    "arrive": "2026-08-11T06:00:00",
+    "stops": 0,
+    "price_usd": 430
+  }
+]

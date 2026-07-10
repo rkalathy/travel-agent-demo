@@ -1,0 +1,65 @@
+[
+  {
+    "id": "HT001",
+    "city": "Tokyo",
+    "name": "Shinjuku Granbell Hotel",
+    "area": "Shinjuku",
+    "stars": 4,
+    "price_per_night_usd": 145,
+    "highlights": ["Rooftop bar", "5 min walk to station", "Free wifi"]
+  },
+  {
+    "id": "HT002",
+    "city": "Tokyo",
+    "name": "Asakusa View Inn",
+    "area": "Asakusa",
+    "stars": 3,
+    "price_per_night_usd": 88,
+    "highlights": ["Near Senso-ji Temple", "Budget friendly", "Traditional decor"]
+  },
+  {
+    "id": "HT003",
+    "city": "Tokyo",
+    "name": "The Ritz-Carlton Tokyo",
+    "area": "Roppongi",
+    "stars": 5,
+    "price_per_night_usd": 620,
+    "highlights": ["Michelin dining", "Spa", "Skyline views"]
+  },
+  {
+    "id": "HT004",
+    "city": "Paris",
+    "name": "Hotel Le Marais Charm",
+    "area": "Le Marais",
+    "stars": 4,
+    "price_per_night_usd": 210,
+    "highlights": ["Historic building", "Walkable to Louvre", "Cafe on site"]
+  },
+  {
+    "id": "HT005",
+    "city": "Paris",
+    "name": "Montmartre Budget Stay",
+    "area": "Montmartre",
+    "stars": 2,
+    "price_per_night_usd": 75,
+    "highlights": ["Near Sacre-Coeur", "Shared kitchen", "Great views"]
+  },
+  {
+    "id": "HT006",
+    "city": "London",
+    "name": "Covent Garden Suites",
+    "area": "Covent Garden",
+    "stars": 4,
+    "price_per_night_usd": 195,
+    "highlights": ["Theatre district", "Kitchenette", "24hr concierge"]
+  },
+  {
+    "id": "HT007",
+    "city": "Tokyo",
+    "name": "Shibuya Sky Capsule",
+    "area": "Shibuya",
+    "stars": 3,
+    "price_per_night_usd": 60,
+    "highlights": ["Capsule pods", "Ultra central", "Great for solo travel"]
+  }
+]
