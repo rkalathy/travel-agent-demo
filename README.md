@@ -115,6 +115,16 @@ flashcards" (or ask for flashcards/study cards/a quiz) and it will:
    `outputs/flashcards/flashcards.html` — a self-contained, printable,
    click-to-reveal flashcard sheet you can open in any browser
 
+## Growing the mock inventory
+
+A second project skill, `agent-travel-data`
+(`.claude/skills/agent-travel-data/`), adds or updates entries in
+`data/flights.json` and `data/hotels.json` — the only inventory
+`search_flights`/`search_hotels` ever return. Ask for something like
+"add Rome to the travel data" and it will generate consistent flight
+and hotel entries, validate them with
+`scripts/validate_travel_data.py`, and report what changed.
+
 ## License
 
 Demo project — use it however you like.
