@@ -42,6 +42,7 @@ day-by-day itinerary to a markdown file.
 travel-agent-demo/
 ├── main.py                     # CLI entry point
 ├── CLAUDE.md                   # project instructions for Claude Code
+├── RUNBOOK.md                   # manual test checklist
 ├── README.md
 ├── requirements.txt
 ├── .env.example
@@ -78,7 +79,8 @@ python main.py --mock "Plan a 3-day trip to Tokyo under $1500"
 ```
 
 You should see tool calls printed to the console and a new file appear
-under `outputs/`.
+under `outputs/`. See `RUNBOOK.md` for the full manual test checklist,
+including edge cases and how to verify each project skill.
 
 ### 3. Run it live
 

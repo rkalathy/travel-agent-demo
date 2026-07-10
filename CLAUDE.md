@@ -9,6 +9,9 @@ until it has produced and saved a day-by-day itinerary.
 
 ## Run / test commands
 
+See `RUNBOOK.md` for the full manual test checklist (edge cases, the
+validator, the flashcards build, live mode). Quick version:
+
 ```bash
 pip install -r requirements.txt
 
