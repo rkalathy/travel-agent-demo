@@ -22,7 +22,7 @@ needs `ANTHROPIC_API_KEY`.
 ```bash
 python -m py_compile main.py agent/*.py agent/tools/*.py \
   .claude/skills/agent-flashcards/scripts/build_flashcards.py \
-  .claude/skills/agent-travel-data/scripts/validate_travel_data.py
+  .claude/skills/create-or-update-travel-data/scripts/validate_travel_data.py
 ```
 
 Expect: no output, exit code 0. Any `SyntaxError`/`IndentationError`
@@ -95,7 +95,7 @@ python main.py --mock "Plan a trip to Rome under \$1500"
 `run_agent_mock` only pattern-matches `tokyo`/`paris`/`london` in the
 request text — anything else silently **falls back to Tokyo**. This is
 expected today, not a crash to chase. If you've just added a new city
-via the `agent-travel-data` skill and want mock mode to route to it,
+via the `create-or-update-travel-data` skill and want mock mode to route to it,
 you'd need to extend the `for city in (...)` tuple in
 `run_agent_mock` (`agent/agent.py`) — that's a real code change, not a
 test.
@@ -110,13 +110,13 @@ Expect it to fall back to the default `max_price = 700` and still
 complete normally (check `search_flights(..., max_price_usd=700)` in
 the printed tool call).
 
-## 3. `agent-travel-data` skill: inventory validity
+## 3. `create-or-update-travel-data` skill: inventory validity
 
 Anytime `data/flights.json` or `data/hotels.json` changes — by hand or
 via the skill — validate them:
 
 ```bash
-python .claude/skills/agent-travel-data/scripts/validate_travel_data.py \
+python .claude/skills/create-or-update-travel-data/scripts/validate_travel_data.py \
   data/flights.json data/hotels.json
 ```
 
@@ -133,7 +133,7 @@ flights = json.load(open('data/flights.json'))
 broken = flights + [{**flights[0], 'id': flights[0]['id'], 'price_usd': -5}]
 json.dump(broken, open('/tmp/broken_flights.json', 'w'))
 "
-python .claude/skills/agent-travel-data/scripts/validate_travel_data.py /tmp/broken_flights.json
+python .claude/skills/create-or-update-travel-data/scripts/validate_travel_data.py /tmp/broken_flights.json
 ```
 
 Expect: `FAILED: N problem(s) found`, listing the duplicate id and the

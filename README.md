@@ -48,7 +48,7 @@ travel-agent-demo/
 ├── .env.example
 ├── .gitignore
 ├── .claude/skills/agent-flashcards/   # study-deck skill
-├── .claude/skills/agent-travel-data/  # mock inventory skill
+├── .claude/skills/create-or-update-travel-data/  # mock inventory skill
 ├── .claude/skills/agent-docs/         # README/CLAUDE.md upkeep skill
 ├── agent/
 │   ├── agent.py                 # the agent loop (run_agent, run_agent_mock)
@@ -121,8 +121,8 @@ flashcards" (or ask for flashcards/study cards/a quiz) and it will:
 
 ## Growing the mock inventory
 
-A second project skill, `agent-travel-data`
-(`.claude/skills/agent-travel-data/`), adds or updates entries in
+A second project skill, `create-or-update-travel-data`
+(`.claude/skills/create-or-update-travel-data/`), adds or updates entries in
 `data/flights.json` and `data/hotels.json` — the only inventory
 `search_flights`/`search_hotels` ever return. Ask for something like
 "add Rome to the travel data" and it will generate consistent flight

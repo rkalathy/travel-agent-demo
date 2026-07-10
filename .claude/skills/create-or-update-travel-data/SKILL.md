@@ -1,5 +1,5 @@
 ---
-name: agent-travel-data
+name: create-or-update-travel-data
 description: Create or update the mock travel inventory (data/flights.json and data/hotels.json) that Atlas's tools read from. Use whenever the user asks to add a destination, add or update flights/hotels, expand the mock inventory, or says things like "add Rome to the data" — even if they don't say "travel data".
 ---
 
@@ -73,7 +73,7 @@ than accuracy to any real-world source.
 4. **Validate before finishing.** Run:
 
    ```bash
-   python .claude/skills/agent-travel-data/scripts/validate_travel_data.py \
+   python .claude/skills/create-or-update-travel-data/scripts/validate_travel_data.py \
      data/flights.json data/hotels.json
    ```
 

@@ -59,7 +59,7 @@ python -m py_compile main.py agent/*.py agent/tools/*.py
   `agent-flashcards` skill writes its study deck.
 - `.claude/skills/agent-flashcards/` — a project skill that generates
   or refreshes a flashcard deck about this codebase (see below).
-- `.claude/skills/agent-travel-data/` — a project skill that creates or
+- `.claude/skills/create-or-update-travel-data/` — a project skill that creates or
   updates the mock inventory in `data/flights.json`/`data/hotels.json`
   (see below).
 - `.claude/skills/agent-docs/` — a project skill that keeps this file
@@ -99,7 +99,7 @@ creates the deck if none exists yet, or updates it in place otherwise.
 
 ## Travel data
 
-Use the `agent-travel-data` skill (`.claude/skills/agent-travel-data/`)
+Use the `create-or-update-travel-data` skill (`.claude/skills/create-or-update-travel-data/`)
 to add or update entries in `data/flights.json` and `data/hotels.json`
 (new destinations, repriced routes, new listings). It validates the
 files with `scripts/validate_travel_data.py` before finishing — don't
