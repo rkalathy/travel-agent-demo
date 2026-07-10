@@ -1,0 +1,70 @@
+{
+  "title": "Atlas Travel Agent — Study Deck",
+  "cards": [
+    {
+      "q": "What two conditions stop the agent loop in run_agent?",
+      "a": "response.stop_reason is no longer \"tool_use\", or MAX_TURNS (12) is reached.",
+      "hint": "look at the for-loop and the if-break"
+    },
+    {
+      "q": "Why is `import anthropic` placed inside run_agent instead of at the top of agent.py?",
+      "a": "So run_agent_mock and --mock CLI usage work without the anthropic package installed.",
+      "hint": "think about what --mock promises"
+    },
+    {
+      "q": "How does the agent loop send tool results back to Claude?",
+      "a": "It appends a user message containing a list of tool_result blocks, each keyed by tool_use_id.",
+      "hint": "messages.append after executing tools"
+    },
+    {
+      "q": "Why does get_weather seed its random generator with the city name?",
+      "a": "So repeated calls for the same city return identical forecasts, keeping demos reproducible.",
+      "hint": "random.Random(city)"
+    },
+    {
+      "q": "What do all four tool functions in travel_tools.py return?",
+      "a": "A JSON string, never a Python object and never a raised exception.",
+      "hint": "json.dumps everywhere"
+    },
+    {
+      "q": "How do tool functions report failures to the model?",
+      "a": "They catch exceptions and return {\"error\": ...} as JSON instead of raising.",
+      "hint": "try/except in every tool"
+    },
+    {
+      "q": "What three things does adding a new tool to this project require?",
+      "a": "A function, a schema entry in TOOL_SCHEMAS, and a registry entry in TOOL_FUNCTIONS.",
+      "hint": "see CLAUDE.md conventions"
+    },
+    {
+      "q": "Compare search_flights and search_hotels: what do they share, and what's different?",
+      "a": "Both filter mock JSON by price and sort cheapest first; hotels also filter by min_stars, flights don't.",
+      "hint": "look at their optional parameters"
+    },
+    {
+      "q": "Why must save_itinerary be called exactly once per trip, per the system prompt?",
+      "a": "To avoid duplicate itinerary files and force the model to finalize the plan before saving.",
+      "hint": "step 6 of the workflow"
+    },
+    {
+      "q": "What does MAX_TURNS protect the agent loop against?",
+      "a": "An unbounded loop if the model keeps requesting tools without ever finishing the plan.",
+      "hint": "safety valve, not a feature"
+    },
+    {
+      "q": "Compare run_agent and run_agent_mock: how do they decide which tools to call?",
+      "a": "run_agent lets Claude choose tool calls dynamically; run_agent_mock calls all four tools via fixed, scripted logic.",
+      "hint": "one asks a model, one doesn't"
+    },
+    {
+      "q": "Where does save_itinerary write its output, and how is the filename made unique?",
+      "a": "Into outputs/, as a markdown file named from the title plus a timestamp.",
+      "hint": "strftime in the function"
+    },
+    {
+      "q": "Why does the system prompt instruct Atlas to never invent listings?",
+      "a": "Tools only know the mock JSON inventory; invented options would mislead the traveler with false data.",
+      "hint": "grounding rule near the end of prompts.py"
+    }
+  ]
+}
