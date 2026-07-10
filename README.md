@@ -132,11 +132,12 @@ and hotel entries, validate them with
 ## Keeping these docs in sync
 
 A third project skill, `agent-docs` (`.claude/skills/agent-docs/`),
-updates this README and `CLAUDE.md` whenever the code moves out from
-under them — a new tool, a new skill, a changed workflow, a renamed
-constant. Ask for something like "update the README" or "refresh
-CLAUDE.md" and it will diff the docs against the current source and
-edit both in place.
+updates this README, `CLAUDE.md`, and `RUNBOOK.md` whenever the code
+moves out from under them — a new tool, a new skill, a changed
+workflow, a renamed constant, or changed mock data that makes
+RUNBOOK.md's example prices/counts stale. Ask for something like
+"update the README" or "update the runbook" and it will diff the docs
+against the current source and edit all three in place.
 
 ## License
 

@@ -81,6 +81,15 @@ than accuracy to any real-world source.
    prefixes, out-of-range stars, non-positive prices) and re-run until it
    reports `OK`.
 
-5. **Report back to the user.** State what changed: how many flights and
+5. **Update RUNBOOK.md if the price/count table is now stale.**
+   `RUNBOOK.md`'s mock-mode section (§2a) quotes min flight price, min
+   hotel price/night, and entry counts per city. If you added, removed,
+   or repriced entries for a city already in that table, re-derive the
+   numbers from the updated JSON and edit the table — don't leave it
+   pointing at superseded prices. Adding a brand-new city doesn't
+   require a new row unless mock mode can actually route to it (see
+   `agent/agent.py`'s `run_agent_mock` destination matcher).
+
+6. **Report back to the user.** State what changed: how many flights and
    hotels were added, updated, or removed, and for which
-   destination(s)/cit(y/ies).
+   destination(s)/cit(y/ies), plus whether RUNBOOK.md needed updating.

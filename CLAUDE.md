@@ -108,7 +108,10 @@ hand-edit these files without running that validator afterward.
 ## Docs
 
 Use the `agent-docs` skill (`.claude/skills/agent-docs/`) to refresh
-this file and `README.md` after a meaningful code change (new/removed
-tool, new/removed skill, changed workflow, changed constants like
-`MAX_TURNS`). It edits both files in place rather than restructuring
-them, and keeps each project skill documented in both.
+this file, `README.md`, and `RUNBOOK.md` after a meaningful code change
+(new/removed tool, new/removed skill, changed workflow, changed
+constants like `MAX_TURNS`, changed mock data). It edits all three
+files in place rather than restructuring them, keeps each project
+skill documented across all three, and re-runs any RUNBOOK.md command
+whose expected output (prices, counts, filenames) might have changed
+rather than guessing.
