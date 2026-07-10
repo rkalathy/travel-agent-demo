@@ -59,6 +59,8 @@ python -m py_compile main.py agent/*.py agent/tools/*.py
 - `.claude/skills/agent-travel-data/` — a project skill that creates or
   updates the mock inventory in `data/flights.json`/`data/hotels.json`
   (see below).
+- `.claude/skills/agent-docs/` — a project skill that keeps this file
+  and `README.md` in sync with the actual code (see below).
 
 ## Conventions
 
@@ -99,3 +101,11 @@ to add or update entries in `data/flights.json` and `data/hotels.json`
 (new destinations, repriced routes, new listings). It validates the
 files with `scripts/validate_travel_data.py` before finishing — don't
 hand-edit these files without running that validator afterward.
+
+## Docs
+
+Use the `agent-docs` skill (`.claude/skills/agent-docs/`) to refresh
+this file and `README.md` after a meaningful code change (new/removed
+tool, new/removed skill, changed workflow, changed constants like
+`MAX_TURNS`). It edits both files in place rather than restructuring
+them, and keeps each project skill documented in both.

@@ -47,6 +47,8 @@ travel-agent-demo/
 ├── .env.example
 ├── .gitignore
 ├── .claude/skills/agent-flashcards/   # study-deck skill
+├── .claude/skills/agent-travel-data/  # mock inventory skill
+├── .claude/skills/agent-docs/         # README/CLAUDE.md upkeep skill
 ├── agent/
 │   ├── agent.py                 # the agent loop (run_agent, run_agent_mock)
 │   ├── prompts.py                # Atlas system prompt
@@ -124,6 +126,15 @@ A second project skill, `agent-travel-data`
 "add Rome to the travel data" and it will generate consistent flight
 and hotel entries, validate them with
 `scripts/validate_travel_data.py`, and report what changed.
+
+## Keeping these docs in sync
+
+A third project skill, `agent-docs` (`.claude/skills/agent-docs/`),
+updates this README and `CLAUDE.md` whenever the code moves out from
+under them — a new tool, a new skill, a changed workflow, a renamed
+constant. Ask for something like "update the README" or "refresh
+CLAUDE.md" and it will diff the docs against the current source and
+edit both in place.
 
 ## License
 
